@@ -55,7 +55,7 @@ int dequeue(Queue q) {
 	return 1;
 }
 
-int top(Queue q) {
+int front(Queue q) {
 	if (q == NULL) { return -1; }
 	return q->arr[q->front];
 }
