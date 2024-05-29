@@ -40,7 +40,19 @@ void selectionSort(int* arr, int size){
     }
 }
 
+//------------- INSERTION SORT -------------
 
+void insertionSort(int* arr, int size){
+    for(int i = 1; i < size; i++){
+        int insert = arr[i]; // element to be inserted
+        int sorted = i - 1; // last index of sorted sublist
+        while (sorted >= 0 && arr[sorted] > insert){
+            arr[sorted + 1] = arr[sorted]; // move element to the right
+            sorted--;
+        }
+        arr[sorted + 1] = insert;
+    }
+}
 
 int main()
 {
